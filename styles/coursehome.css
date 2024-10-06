@@ -1,0 +1,276 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Basic Reset */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+/* Root Variables */
+:root {
+	--primary-color: #5e0b15;
+	--secondary-color: #90323d;
+	--dark-color: #000000;
+	--tertiary-color: #ffffff;
+	--aside-color: #e7d915;
+}
+
+.aside {
+	color: var(--aside-color) !important;
+}
+
+/* Body Styles */
+body {
+	font-family: "Lato", sans-serif;
+	font-weight: 400;
+	color: var(--tertiary-color);
+	line-height: 1.6;
+	background-color: #ffffff;
+}
+
+/* Header Styles */
+header {
+	background-color: var(--primary-color);
+}
+
+header .heading {
+	justify-content: center;
+	align-items: center;
+	padding: 2rem;
+	gap: 1rem;
+}
+
+header h1 {
+	font-size: 2rem;
+	color: var(--tertiary-color);
+}
+
+.d-flex {
+	display: flex;
+}
+
+.photo-container {
+	display: flex;
+	align-items: center;
+}
+
+.photo-container img {
+	width: 100px;
+	height: 100px;
+}
+
+/* Navigation Styles */
+nav {
+	display: flex;
+	background-color: var(--dark-color);
+	justify-content: space-evenly;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+}
+
+nav ul li {
+	margin: 10px 0;
+}
+
+nav ul li a {
+	position: relative;
+	color: #fff;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-decoration: none;
+	transition: background-color 0.3s;
+	overflow: hidden;
+	padding-bottom: 5px;
+}
+
+nav ul li a::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+	width: 90%;
+}
+
+#hamburger {
+	display: none;
+	font-size: 2rem;
+	background: none;
+	border: none;
+	color: var(--tertiary-color);
+}
+
+/* Main Content Styles */
+main {
+	display: grid;
+	grid-template-rows: auto auto;
+
+	gap: 20px;
+	max-width: 95%;
+	margin: 2rem auto;
+	padding: 1rem;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"card1"
+		"card2"
+		"card3";
+}
+
+.card {
+	color: #000;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+}
+
+.card-1 {
+	grid-area: card1;
+}
+
+.card-2 {
+	grid-area: card2;
+}
+
+.card-3 {
+	grid-area: card3;
+}
+
+.card-content {
+	padding: 20px;
+}
+
+.card-title {
+	background-color: var(--primary-color);
+	color: var(--tertiary-color);
+	padding: 10px;
+	border-radius: 8px 8px 0 0;
+	text-align: center;
+}
+
+figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+figure img {
+	width: 50%;
+	height: auto;
+	display: block;
+}
+
+figcaption {
+	text-align: center;
+}
+
+/* Course Section */
+
+.course-selector {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem 0;
+	border-bottom: #a39696 1px solid;
+}
+
+.course-selector button {
+	background-color: var(--dark-color);
+	color: var(--tertiary-color);
+	font-weight: 600;
+	border: none;
+	padding: 1rem 2.5rem;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+#courses {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 25px;
+	width: 100%;
+	padding: 2rem;
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+	background-color: var(--primary-color);
+	color: var(--tertiary-color);
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	padding: 1rem;
+}
+
+.course-card .completed {
+	background-color: #4caf50;
+	color: var(--tertiary-color);
+	padding: 0.5rem;
+	border-radius: 8px;
+}
+
+/* Footer Styles */
+footer {
+	background-color: var(--primary-color);
+	text-align: center;
+	padding: 1.2rem;
+}
+
+footer p {
+	font-size: 1.3rem;
+	margin-bottom: 10px;
+}
+
+footer p:last-child {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+	#hamburger {
+		display: block;
+	}
+
+	nav ul {
+		max-height: 0;
+		overflow: hidden;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		background-color: var(--primary-color);
+		width: 100%;
+		top: 5.677rem;
+		right: 0;
+		transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+		opacity: 0;
+	}
+
+	nav ul.show {
+		max-height: 320px;
+		opacity: 1;
+	}
+
+	main {
+		padding: 0;
+	}
+}
