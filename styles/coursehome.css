@@ -1,6 +1,3 @@
-/* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Dongle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-
 /* Basic Reset */
 * {
 	box-sizing: border-box;
@@ -19,6 +16,7 @@ ul {
 	--dark-color: #000000;
 	--tertiary-color: #ffffff;
 	--aside-color: #e7d915;
+	--completed-color: #d1cccc;
 }
 
 .aside {
@@ -58,11 +56,6 @@ header h1 {
 .photo-container {
 	display: flex;
 	align-items: center;
-}
-
-.photo-container img {
-	width: 100px;
-	height: 100px;
 }
 
 /* Navigation Styles */
@@ -171,8 +164,6 @@ figure {
 }
 
 figure img {
-	width: 50%;
-	height: auto;
 	display: block;
 }
 
@@ -210,10 +201,10 @@ figcaption {
 }
 
 .course-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
 	background-color: var(--primary-color);
 	color: var(--tertiary-color);
 	border: 1px solid #ccc;
@@ -221,11 +212,14 @@ figcaption {
 	padding: 1rem;
 }
 
-.course-card .completed {
-	background-color: #4caf50;
-	color: var(--tertiary-color);
-	padding: 0.5rem;
-	border-radius: 8px;
+.completed {
+	background-color: var(--completed-color);
+	color: var(--dark-color);
+}
+
+.total-credits {
+	font-size: 1.2rem;
+	font-weight: 600;
 }
 
 /* Footer Styles */
