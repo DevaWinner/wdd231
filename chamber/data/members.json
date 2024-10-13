@@ -1,0 +1,92 @@
+[
+	{
+		"name": "Divine Option Technical",
+		"address": "123 Innovation Street, Abuja, Nigeria",
+		"phone": "+234 801 234 5678",
+		"website": "http://abujatechhub.com",
+		"membership": 3,
+		"description": "A technology center fostering innovation and entrepreneurship.",
+		"image": "https://divineoptiontechnical.com/wp-content/uploads/2023/01/42-150x150.png"
+	},
+	{
+		"name": "Green Ventures Ltd",
+		"address": "45 Greenway Blvd, Abuja, Nigeria",
+		"phone": "+234 809 345 6789",
+		"website": "http://greenventures.com",
+		"image": "greenventures.jpg",
+		"membership": 2,
+		"description": "Sustainable energy and agriculture solutions."
+	},
+	{
+		"name": "Abuja Fitness Club",
+		"address": "234 Fit Road, Abuja, Nigeria",
+		"phone": "+234 807 456 7890",
+		"website": "http://abujafitness.com",
+		"image": "abujafitness.jpg",
+		"membership": 3,
+		"description": "A premium fitness club offering a variety of training programs."
+	},
+	{
+		"name": "Luxury Interiors Ltd",
+		"address": "678 Style Avenue, Abuja, Nigeria",
+		"phone": "+234 806 567 8901",
+		"website": "http://luxuryinteriors.com",
+		"image": "luxuryinteriors.jpg",
+		"membership": 1,
+		"description": "Specializes in high-end interior design and furnishing."
+	},
+	{
+		"name": "Capital Catering Services",
+		"address": "89 Culinary Street, Abuja, Nigeria",
+		"phone": "+234 805 678 9012",
+		"website": "http://capitalcatering.com",
+		"image": "capitalcatering.jpg",
+		"membership": 2,
+		"description": "Catering services for events, corporate, and private gatherings."
+	},
+	{
+		"name": "Sunny Bakers",
+		"address": "101 Sunshine Avenue, Abuja, Nigeria",
+		"phone": "+234 809 789 0123",
+		"website": "http://sunnybakers.com",
+		"image": "sunnybakers.jpg",
+		"membership": 3,
+		"description": "Baking the freshest breads, pastries, and cakes in Abuja."
+	},
+	{
+		"name": "Elite Transport Services",
+		"address": "12 Mobility Drive, Abuja, Nigeria",
+		"phone": "+234 808 890 1234",
+		"website": "http://elitetransport.com",
+		"image": "elitetransport.jpg",
+		"membership": 1,
+		"description": "Provides executive and corporate transportation solutions."
+	},
+	{
+		"name": "Bloom Landscaping",
+		"address": "555 Garden Lane, Abuja, Nigeria",
+		"phone": "+234 809 101 2345",
+		"website": "http://bloomlandscaping.com",
+		"image": "bloomlandscaping.jpg",
+		"membership": 2,
+		"description": "Professional landscaping and gardening services."
+	},
+	{
+		"name": "Abuja Wellness Center",
+		"address": "78 Health Avenue, Abuja, Nigeria",
+		"phone": "+234 805 112 3456",
+		"website": "http://abujawellness.com",
+		"image": "abujawellness.jpg",
+		"membership": 3,
+		"description": "Offers health and wellness programs, spa treatments, and yoga classes."
+	},
+	{
+		"name": "Capital Consulting Group",
+		"address": "303 Business District, Abuja, Nigeria",
+		"phone": "+234 807 223 4567",
+		"website": "http://capitalconsulting.com",
+		"image": "capitalconsulting.jpg",
+		"membership": 1,
+		"description": "Business consulting and strategy services for small and medium enterprises."
+	}
+]

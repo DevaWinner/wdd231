@@ -1,5 +1,12 @@
 main {
-	padding: 1rem;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+main section {
 }
 
 .footer-content {
@@ -27,40 +34,115 @@ main {
 	object-fit: cover;
 }
 
-.home {
+/* Member Directory Section */
+.member-directory {
+	text-align: center;
+}
+
+.member-directory h2 {
+	font-size: 2em;
+	margin-bottom: 20px;
+}
+
+.toggle-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+
+.toggle-buttons .icon {
+	cursor: pointer;
+	font-size: 2em;
+	transition: color 0.3s;
+}
+
+.toggle-buttons .icon:hover {
+	color: #006400;
+}
+
+/* Member Cards */
+#members-container {
 	display: grid;
-	grid-template-rows: auto auto;
+	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-	max-width: 95%;
-	margin: 2rem auto;
-	padding: 1rem;
-	grid-template-columns: 1fr;
-	grid-template-areas:
-		"card1"
-		"card2"
-		"card3";
 }
 
-.card {
-	color: #000;
-	border: 1px solid #ccc;
+#members-container.list-view {
+	display: table;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.member-card {
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
 	border-radius: 8px;
+	padding: 15px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
 }
 
-.card-1 {
-	grid-area: card1;
+#members-container.list-view .member-card {
+	display: table-row;
+	border: none;
+	box-shadow: none;
+	padding: 10px 0;
+	border-bottom: 1px solid #cccccc;
 }
 
-.card-2 {
-	grid-area: card2;
+#members-container.list-view .member-card h3,
+#members-container.list-view .member-card p,
+#members-container.list-view .member-card a {
+	display: table-cell;
+	padding: 10px;
 }
 
-.card-3 {
-	grid-area: card3;
+#members-container.list-view .member-card img {
+	display: none;
 }
 
-.card-content {
-	padding: 20px;
+.member-card img {
+	width: 100%;
+	height: auto;
+	max-height: 150px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+.member-card h3 {
+	font-size: 1.2em;
+	margin: 10px 0;
+}
+
+.member-card p {
+	margin: 5px 0;
+}
+
+.member-card span {
+  display: block;
+  margin-top: 10px;
+}
+
+.member-card a {
+	color: #006400;
+	text-decoration: none;
+}
+
+.member-card a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	#members-container {
+		grid-template-columns: 1fr;
+	}
+
+	.toggle-buttons {
+		flex-direction: column;
+		gap: 5px;
+	}
 }
 
 /* Dynamically updating last modification date and copyright year */

@@ -16,11 +16,6 @@ header {
 	padding: 1.2rem 2rem;
 }
 
-header h1 {
-	font-size: 2rem;
-	color: var(--tertiary-color);
-}
-
 /* Navigation Styles */
 nav {
 	display: flex;
@@ -111,13 +106,6 @@ nav ul li a:hover::after {
 	display: block;
 }
 
-footer {
-  background-color: var(--primary-color);
-  color: var(--secondary-color);
-  text-align: center;
-  padding: 1rem;
-}
-
 @media (max-width: 768px) {
 	#hamburger {
 		display: block;
@@ -148,5 +136,56 @@ footer {
 
 	.small {
 		display: block;
+	}
+}
+
+@media (min-width: 769px) {
+	main {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	nav ul {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	nav ul li {
+		margin: 0 10px;
+	}
+}
+
+footer {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	text-align: center;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	gap: 30px;
+}
+
+footer address {
+	line-height: 1.8;
+}
+
+footer p {
+	margin: 10px;
+}
+
+.social-icon {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+@media (max-width: 768px) {
+	footer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	footer p {
+		margin-bottom: 10px;
 	}
 }
