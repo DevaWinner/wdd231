@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	);
 
 	// Fetch member data and display it
-	fetch("../data/members.json")
+	fetch("data/members.json")
 		.then(function (response) {
 			return response.json();
 		})
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Function to update the view type
 	function updateView(viewType) {
-		fetch("../data/members.json")
+		fetch("data/members.json")
 			.then(function (response) {
 				return response.json();
 			})
