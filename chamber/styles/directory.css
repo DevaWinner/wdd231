@@ -81,6 +81,10 @@ main section {
 	padding: 15px;
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
 }
 
 #members-container.list-view .member-card {
@@ -103,7 +107,7 @@ main section {
 }
 
 .member-card img {
-	width: 100%;
+	width: 100px;
 	height: auto;
 	max-height: 150px;
 	object-fit: cover;
@@ -117,7 +121,7 @@ main section {
 }
 
 .member-card p {
-	margin: 5px 0;
+	margin: 10px 0;
 }
 
 .member-card span {

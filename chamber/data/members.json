@@ -13,7 +13,7 @@
 		"address": "45 Greenway Blvd, Abuja, Nigeria",
 		"phone": "+234 809 345 6789",
 		"website": "http://greenventures.com",
-		"image": "greenventures.jpg",
+		"image": "https://greenventuresnepal.com/wp-content/uploads/2024/01/cropped-Logo-193x73.jpg",
 		"membership": 2,
 		"description": "Sustainable energy and agriculture solutions."
 	},
@@ -22,7 +22,7 @@
 		"address": "234 Fit Road, Abuja, Nigeria",
 		"phone": "+234 807 456 7890",
 		"website": "http://abujafitness.com",
-		"image": "abujafitness.jpg",
+		"image": "https://ifitness.ng/wp-content/uploads/2021/10/i-fitness-logo-white-svg-01-2.svg",
 		"membership": 3,
 		"description": "A premium fitness club offering a variety of training programs."
 	},
@@ -31,7 +31,7 @@
 		"address": "678 Style Avenue, Abuja, Nigeria",
 		"phone": "+234 806 567 8901",
 		"website": "http://luxuryinteriors.com",
-		"image": "luxuryinteriors.jpg",
+		"image": "https://images.squarespace-cdn.com/content/v1/59f1a50f017db20ce43f3f36/1509977652604-05QS7T5F4PSUZE107GGW/Website+Navigation+Logo+Dark.png?format=1500w",
 		"membership": 1,
 		"description": "Specializes in high-end interior design and furnishing."
 	},
@@ -40,7 +40,7 @@
 		"address": "89 Culinary Street, Abuja, Nigeria",
 		"phone": "+234 805 678 9012",
 		"website": "http://capitalcatering.com",
-		"image": "capitalcatering.jpg",
+		"image": "https://adneccorporatestorage.blob.core.windows.net/capitalcatering/2023/12/CC-logo-bilangual.webp",
 		"membership": 2,
 		"description": "Catering services for events, corporate, and private gatherings."
 	},
@@ -49,7 +49,7 @@
 		"address": "101 Sunshine Avenue, Abuja, Nigeria",
 		"phone": "+234 809 789 0123",
 		"website": "http://sunnybakers.com",
-		"image": "sunnybakers.jpg",
+		"image": "https://sunking.com/wp-content/uploads/2017/12/Sun-King-Logo-1.png",
 		"membership": 3,
 		"description": "Baking the freshest breads, pastries, and cakes in Abuja."
 	},
@@ -58,7 +58,7 @@
 		"address": "12 Mobility Drive, Abuja, Nigeria",
 		"phone": "+234 808 890 1234",
 		"website": "http://elitetransport.com",
-		"image": "elitetransport.jpg",
+		"image": "https://elitetransportservice.net/wp-content/uploads/2022/03/elitelogoSITE2.png",
 		"membership": 1,
 		"description": "Provides executive and corporate transportation solutions."
 	},
@@ -67,7 +67,7 @@
 		"address": "555 Garden Lane, Abuja, Nigeria",
 		"phone": "+234 809 101 2345",
 		"website": "http://bloomlandscaping.com",
-		"image": "bloomlandscaping.jpg",
+		"image": "https://www.bloomlandscaping.com/media/themes/bloom-bones/library/images/bloom-logo.png",
 		"membership": 2,
 		"description": "Professional landscaping and gardening services."
 	},
@@ -76,7 +76,7 @@
 		"address": "78 Health Avenue, Abuja, Nigeria",
 		"phone": "+234 805 112 3456",
 		"website": "http://abujawellness.com",
-		"image": "abujawellness.jpg",
+		"image": "https://nisawellnessretreat.com/wp-content/uploads/2022/12/Nisa-Wellness-Retreat-_150px.png",
 		"membership": 3,
 		"description": "Offers health and wellness programs, spa treatments, and yoga classes."
 	},
@@ -85,7 +85,7 @@
 		"address": "303 Business District, Abuja, Nigeria",
 		"phone": "+234 807 223 4567",
 		"website": "http://capitalconsulting.com",
-		"image": "capitalconsulting.jpg",
+		"image": "https://capitalconsulting-group.com/wp-content/uploads/2024/09/Green-Logo-capital-consulting.png",
 		"membership": 1,
 		"description": "Business consulting and strategy services for small and medium enterprises."
 	}
