@@ -1,0 +1,20 @@
+@media (min-width: 769px) {
+	main {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+	nav ul {
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	nav ul li {
+		margin: 0 10px;
+	}
+
+	.home {
+		grid-template-columns: 2fr 1fr 1fr;
+		grid-template-areas: "card1 card2 card3";
+	}
+}

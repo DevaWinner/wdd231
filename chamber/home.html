@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Directory of Abuja Chamber of Commerce members"
+		/>
+		<meta name="author" content="Aniekan Winner Anietie" />
+		<title>Directory | Abuja Chamber of Commerce</title>
+		<link rel="icon" href="/chamber/assets/favicon.ico" type="image/x-icon" />
+		<meta property="og:title" content="Abuja Chamber of Commerce Directory" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://github.com/username/chamber/assets/og-image.jpg"
+		/>
+		<meta
+			property="og:url"
+			content="https://www.abujachamber.com/directory.html"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dongle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=contrast"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./styles/base.css" />
+		<link rel="stylesheet" href="./styles/directory.css" />
+		<link rel="stylesheet" href="./styles/directory-large.css" />
+
+		<script src="scripts/main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<img
+					src="./images/chamber-logo.svg"
+					alt="Abuja Chamber of Commerce Logo"
+					class="logo"
+					width="150"
+					height="70"
+				/>
+			</div>
+			<nav>
+				<span class="material-symbols-outlined contrast-icon small">
+					contrast
+				</span>
+
+				<button id="hamburger">&#9776;</button>
+				<ul id="nav-menu">
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="join.html">Join</a></li>
+					<li><a href="discover.html">Discover</a></li>
+				</ul>
+
+				<span class="material-symbols-outlined contrast-icon large">
+					contrast
+				</span>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div>
+					<img
+						src="./images/nigeria-large.webp"
+						alt="Photograph of Abuja City"
+					/>
+				</div>
+			</section>
+
+			<section class="home">
+        <h1>Home</h1>
+				<div class="card card-1">
+					<h2 class="card-title">Course Work</h2>
+					<ul class="card-content">
+						<li>...</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+				</div>
+
+				<div class="card card-2">
+					<h2 class="card-title">Abuja, Nigeria</h2>
+					<figure class="card-content">
+						<img
+							src="images/nigeria-sm.webp"
+							width="180"
+							height="250"
+							alt="Baobab Trees"
+							loading="lazy"
+						/>
+						<figcaption>City Gate, Abuja</figcaption>
+					</figure>
+				</div>
+				<div class="card card-3">
+					<h2 class="card-title">Abuja, Nigeria</h2>
+					<figure class="card-content">
+						<img
+							src="images/nigeria-sm.webp"
+							width="180"
+							height="250"
+							alt="Baobab Trees"
+							loading="lazy"
+						/>
+						<figcaption>City Gate, Abuja</figcaption>
+					</figure>
+				</div>
+			</section>
+			<section class="member-directory">
+				<h2>Member Directory</h2>
+				<div class="toggle-buttons">
+					<button id="gridView">Grid View</button>
+					<button id="listView">List View</button>
+				</div>
+				<section id="members-container"></section>
+			</section>
+		</main>
+		<footer>
+			<div class="footer-content">
+				<address>
+					Abuja Chamber of Commerce<br />
+					123 Main Street, Abuja, Nigeria<br />
+					Email: info@abujachamber.com | Phone: +234 123 456 789
+				</address>
+				<div class="social-media">
+					<a href="#" target="_blank"
+						><img src="/chamber/assets/facebook-icon.png" alt="Facebook"
+					/></a>
+					<a href="#" target="_blank"
+						><img src="/chamber/assets/twitter-icon.png" alt="Twitter"
+					/></a>
+					<a href="#" target="_blank"
+						><img src="/chamber/assets/linkedin-icon.png" alt="LinkedIn"
+					/></a>
+				</div>
+				<p>Developed by Oluchi Iseguene | WDD 231 Project</p>
+				<p>
+					&copy; <span id="year"></span> Abuja Chamber of Commerce | Last
+					modified: <span id="lastModified"></span>
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
