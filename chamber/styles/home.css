@@ -56,7 +56,7 @@
 
 .weather-container,
 .forecast-container {
-	padding: 1.5rem 2rem;
+	padding: 1.5rem;
 }
 
 .card-1 {
@@ -157,6 +157,66 @@
 }
 
 .featured-heading {
-  text-align: center;
-  margin: 2rem 0;
+	text-align: center;
+	margin: 2rem 0;
+}
+
+.weather-container {
+	display: flex;
+	align-items: center;
+}
+
+.weather-icon {
+	align-self: flex-start;
+}
+
+.weather-icon img {
+	width: 80px;
+	height: auto;
+}
+
+.weather-info p {
+	display: flex;
+	justify-content: space-between;
+	gap: 3rem;
+}
+
+.forecast {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+}
+
+.day,
+.weather-info p {
+	font-weight: 600;
+}
+
+.weather-info p span {
+	font-weight: 400;
+}
+
+.temp{
+  font-size: 1.2rem;
+}
+
+.weather{
+  font-size: 1.2rem;
+  font-weight: 400 !important;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+	.weather-container {
+		flex-direction: column;
+	}
+
+	.weather-icon {
+		align-self: center;
+	}
+
+	.weather-info {
+		align-self: flex-start;
+	}
 }

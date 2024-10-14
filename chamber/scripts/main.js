@@ -1,5 +1,5 @@
 // OpenWeatherMap API configuration
-const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+const apiKey = "5cf8df03982c16cd9dcb2aae8c15d2ce";
 const city = "Abuja";
 const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
@@ -8,36 +8,50 @@ fetch(weatherUrl)
 	.then((response) => response.json())
 	.then((data) => {
 		const currentWeather = data.list[0];
-		const temp = Math.round(currentWeather.main.temp);
+		const tempC = Math.round(currentWeather.main.temp);
+		const tempF = Math.round((tempC * 9) / 5 + 32);
 		const weatherDescription = currentWeather.weather
 			.map((w) => capitalizeWords(w.description))
 			.join(", ");
+		const highTempC = Math.round(currentWeather.main.temp_max);
+		const highTempF = Math.round((highTempC * 9) / 5 + 32);
+		const lowTempC = Math.round(currentWeather.main.temp_min);
+		const lowTempF = Math.round((lowTempC * 9) / 5 + 32);
+		const humidity = currentWeather.main.humidity;
+		const sunrise = new Date(data.city.sunrise * 1000).toLocaleTimeString([], {
+			hour: "2-digit",
+			minute: "2-digit",
+		});
+		const sunset = new Date(data.city.sunset * 1000).toLocaleTimeString([], {
+			hour: "2-digit",
+			minute: "2-digit",
+		});
 
 		// Update weather info
 		document.querySelector(".weather-info").innerHTML = `
-      <p>City: ${city}</p>
-      <p>Temperature: ${temp}&deg;C</p>
-      <p>Description: ${weatherDescription}</p>
-    `;
-
-		// Update weather icon
-		document.getElementById(
-			"weather-icon"
-		).src = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`;
+            <p class="temp">${tempF}&deg;F</p>
+            <p class="weather">${weatherDescription}</p>
+            <p>High: <span>${highTempF}&deg;F</span></p>
+            <p>Low: <span>${lowTempF}&deg;F</span></p>
+            <p>Humidity: <span>${humidity}%</span></p>
+            <p>Sunrise: <span>${sunrise}</span></p>
+            <p>Sunset: <span>${sunset}</span></p>
+        `;
 
 		// 3-day forecast
 		const forecastContainer = document.querySelector(".forecast-container");
 		for (let i = 1; i <= 3; i++) {
 			const forecast = data.list[i * 8];
 			forecastContainer.innerHTML += `
-        <div class="forecast">
-          <div class="day">${new Date(forecast.dt_txt).toLocaleDateString(
-						"en-US",
-						{ weekday: "long" }
-					)}</div>
-          <div class="temperature">${Math.round(forecast.main.temp)}&deg;C</div>
-        </div>
-      `;
+                <div class="forecast">
+                    <div class="day">${new Date(
+											forecast.dt_txt
+										).toLocaleDateString("en-US", { weekday: "long" })}</div>
+                    <div class="temperature">${Math.round(
+											(forecast.main.temp * 9) / 5 + 32
+										)}&deg;F</div>
+                </div>
+            `;
 		}
 	})
 	.catch((error) => console.error("Error fetching weather data:", error));

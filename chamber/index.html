@@ -40,6 +40,7 @@
 		<link rel="stylesheet" href="./styles/base.css" />
 		<link rel="stylesheet" href="./styles/home.css" />
 
+		<script src="scripts/general.js" defer></script>
 		<script src="scripts/main.js" defer></script>
 	</head>
 	<body>
@@ -89,42 +90,28 @@
 				<div class="card-container">
 					<div class="card card-1">
 						<h2 class="card-title">Events</h2>
-						<ul class="card-content">
-							<li>...</li>
-							<li>...</li>
-							<li>...</li>
-						</ul>
+						<ul class="card-content"></ul>
 					</div>
 
 					<div class="card card-2">
 						<h2 class="card-title">Current Weather</h2>
 						<div class="weather-container">
 							<div class="weather-icon">
-								<img src="images/weather-icons/01d.png" alt="Clear Sky" />
+								<img src="./images/weather.svg" alt="Clear Sky" />
 							</div>
-							<div class="weather-info">
-								<p>City: Abuja</p>
-								<p>Temperature: 30&deg;C</p>
-								<p>Humidity: 50%</p>
-								<p>Wind: 5 m/s</p>
-							</div>
+							<div class="weather-info"></div>
 						</div>
 					</div>
 
 					<div class="card card-3">
 						<h2 class="card-title">Weather Forecast</h2>
-						<div class="forecast-container">
-							<div class="forecast">
-								<div class="day">Monday</div>
-								<div class="temperature">30&deg;C</div>
-							</div>
-						</div>
+						<div class="forecast-container"></div>
 					</div>
 				</div>
 			</section>
 
 			<section class="featured-members-container">
-        <h2 class="featured-heading">Featured Members</h2>
+				<h2 class="featured-heading">Featured Members</h2>
 				<section id="featured-members"></section>
 			</section>
 		</main>
