@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Fill form to join the Abuja Chamber of Commerce"
+		/>
+		<meta name="author" content="Aniekan Winner Anietie" />
+		<title>Join - Abuja Chamber of Commerce</title>
+		<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+		<meta property="og:title" content="Abuja Chamber of Commerce Directory" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:image"
+			content="https://devawinner.github.io/wdd231/chamber/images/chamber-logo.svg"
+		/>
+		<meta
+			property="og:url"
+			content="https://devawinner.github.io/wdd231/chamber/join.html"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Dongle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=contrast,grid_view,view_list"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		/>
+		<link rel="stylesheet" href="./styles/base.css" />
+		<link rel="stylesheet" href="./styles/join.css" />
+
+		<script src="scripts/general.js" defer></script>
+		<script src="scripts/join.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<img
+					src="./images/chamber-logo.svg"
+					alt="Abuja Chamber of Commerce Logo"
+					class="logo"
+					width="150"
+					height="70"
+				/>
+			</div>
+			<nav>
+				<span class="material-symbols-outlined contrast-icon small">
+					contrast
+				</span>
+
+				<button id="hamburger">&#9776;</button>
+				<ul id="nav-menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="join.html" class="active">Join</a></li>
+					<li><a href="discover.html">Discover</a></li>
+				</ul>
+
+				<span class="material-symbols-outlined contrast-icon large">
+					contrast
+				</span>
+			</nav>
+		</header>
+
+		<main class="container">
+			<div class="form-heading">
+				<h2>Become a Member</h2>
+				<p>
+					Join the Abuja Chamber of Commerce to gain access to exclusive events,
+					networking opportunities, and community initiatives.
+				</p>
+			</div>
+
+			<section class="container">
+				<!-- Form -->
+				<form method="get" action="thankyou.html">
+					<!-- First Name -->
+					<label for="firstName"
+						>First Name:
+						<input
+							type="text"
+							id="firstName"
+							name="firstName"
+							required
+							autocomplete="given-name"
+							title="Enter your first name"
+						/>
+					</label>
+
+					<!-- Last Name -->
+					<label for="lastName"
+						>Last Name:
+						<input
+							type="text"
+							id="lastName"
+							name="lastName"
+							required
+							autocomplete="family-name"
+							title="Enter your last name"
+						/>
+					</label>
+
+					<!-- Organizational Title -->
+					<label for="orgTitle"
+						>Organizational Title:
+						<input
+							type="text"
+							id="orgTitle"
+							name="orgTitle"
+							autocomplete="organization-title"
+							title="Enter your organizational title"
+							pattern="[A-Za-z\s\-]{7,}"
+						/>
+					</label>
+
+					<!-- Email Address -->
+					<label for="email"
+						>Email Address:
+						<input
+							type="email"
+							id="email"
+							name="email"
+							required
+							autocomplete="email"
+							title="Enter your email address"
+							placeholder="example@domain.com"
+						/>
+					</label>
+
+					<!-- Mobile Phone Number -->
+					<label for="mobile"
+						>Mobile Phone Number:
+						<input
+							type="tel"
+							id="mobile"
+							name="mobile"
+							required
+							autocomplete="tel"
+							title="Enter your mobile phone number"
+						/>
+					</label>
+
+					<!-- Organization Name -->
+					<label for="organization"
+						>Organization Name:
+						<input
+							type="text"
+							id="organization"
+							name="organization"
+							required
+							autocomplete="organization"
+							title="Enter your organization's name"
+						/>
+					</label>
+
+					<!-- Membership Level Selection -->
+					<fieldset>
+						<legend>Select Membership Level</legend>
+						<label>
+							<input
+								type="radio"
+								name="membershipLevel"
+								value="NP Membership"
+								required
+							/>
+							NP Membership (No fee for non-profits)
+						</label>
+						<label>
+							<input
+								type="radio"
+								name="membershipLevel"
+								value="Bronze Membership"
+							/>
+							Bronze Membership
+						</label>
+						<label>
+							<input
+								type="radio"
+								name="membershipLevel"
+								value="Silver Membership"
+							/>
+							Silver Membership
+						</label>
+						<label>
+							<input
+								type="radio"
+								name="membershipLevel"
+								value="Gold Membership"
+							/>
+							Gold Membership
+						</label>
+					</fieldset>
+
+					<!-- Organization Description -->
+					<label for="orgDescription"
+						>Organization Description:
+						<textarea
+							id="orgDescription"
+							name="orgDescription"
+							title="Describe your organization"
+						></textarea>
+					</label>
+
+					<!-- Timestamp -->
+					<input type="hidden" id="timestamp" name="timestamp" />
+
+					<!-- Submit Button -->
+					<input type="submit" value="Submit Application" />
+				</form>
+
+				<!-- Membership Level Cards -->
+				<section id="membershipCards">
+					<div class="card">
+						<h3>NP Membership</h3>
+						<a href="#" class="more-info" data-modal="npModal">More Info</a>
+					</div>
+					<div class="card">
+						<h3>Bronze Membership</h3>
+						<a href="#" class="more-info" data-modal="bronzeModal">More Info</a>
+					</div>
+					<div class="card">
+						<h3>Silver Membership</h3>
+						<a href="#" class="more-info" data-modal="silverModal">More Info</a>
+					</div>
+					<div class="card">
+						<h3>Gold Membership</h3>
+						<a href="#" class="more-info" data-modal="goldModal">More Info</a>
+					</div>
+				</section>
+			</section>
+
+			<!-- Modals for Membership Level Information -->
+			<!-- NP Membership Modal -->
+			<div id="npModal" class="modal">
+				<div class="modal-content">
+					<span class="close" data-modal="npModal">&times;</span>
+					<h2>Non Profit Membership Benefits</h2>
+					<p>
+						Access to non-profit events, networking opportunities, and community
+						outreach programs.
+					</p>
+				</div>
+			</div>
+			<!-- Bronze Membership Modal -->
+			<div id="bronzeModal" class="modal">
+				<div class="modal-content">
+					<span class="close" data-modal="bronzeModal">&times;</span>
+					<h2>Bronze Membership Benefits</h2>
+					<p>
+						Includes basic event access, directory listing, and participation in
+						local initiatives.
+					</p>
+				</div>
+			</div>
+			<!-- Silver Membership Modal -->
+			<div id="silverModal" class="modal">
+				<div class="modal-content">
+					<span class="close" data-modal="silverModal">&times;</span>
+					<h2>Silver Membership Benefits</h2>
+					<p>
+						All Bronze benefits plus discounted event tickets and marketing
+						support.
+					</p>
+				</div>
+			</div>
+			<!-- Gold Membership Modal -->
+			<div id="goldModal" class="modal">
+				<div class="modal-content">
+					<span class="close" data-modal="goldModal">&times;</span>
+					<h2>Gold Membership Benefits</h2>
+					<p>
+						All Silver benefits plus premium advertising, exclusive events, and
+						priority support.
+					</p>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<address>
+				Abuja Chamber of Commerce<br />
+				123 Main Street, Abuja, Nigeria<br />
+				info@abujachamber.com <br />
+				Phone: +234 123 456 789
+			</address>
+			<div class="social-media">
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/fb.svg" alt="Facebook" />
+				</a>
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/linkedin.svg" alt="Twitter" />
+				</a>
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/twitter.svg" alt="LinkedIn" />
+				</a>
+			</div>
+			<div>
+				<p>WDD231 Class Project</p>
+				<p>Aniekan Winner Anietie</p>
+				<p>&copy; <span id="year"></span> Abuja Chamber of Commerce</p>
+				<p>Last modified: <span id="lastModified"></span></p>
+			</div>
+		</footer>
+	</body>
+</html>
