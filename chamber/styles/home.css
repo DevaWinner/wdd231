@@ -100,3 +100,63 @@
 		grid-template-areas: "card1 card2 card3";
 	}
 }
+
+#featured-members {
+	display: flex !important;
+	gap: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.spotlight-card {
+	border: 1px solid #cccccc93;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+	background-color: #fff;
+	margin-bottom: 20px;
+	transition: transform 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	align-items: center;
+}
+
+.spotlight-card:hover {
+	transform: scale(1.05);
+}
+
+.member-logo {
+	width: 150px;
+	height: auto;
+	height: 110px;
+	object-fit: scale-down;
+	margin-bottom: 10px;
+}
+
+.card-content {
+	padding: 15px;
+}
+
+.card-content h3 {
+	font-size: 1.5rem;
+	margin: 10px 0;
+}
+
+.card-content p {
+	margin: 15px 0;
+}
+
+.card-content a {
+	color: var(--primary-color);
+	text-decoration: none;
+	font-weight: 600;
+	display: block;
+	margin: 10px 0;
+}
+
+.featured-heading {
+  text-align: center;
+  margin: 2rem 0;
+}

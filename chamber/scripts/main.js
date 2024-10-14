@@ -1,101 +1,83 @@
-document.addEventListener("DOMContentLoaded", function () {
-	document.getElementById("year").textContent = new Date().getFullYear();
+// OpenWeatherMap API configuration
+const apiKey = "YOUR_OPENWEATHERMAP_API_KEY";
+const city = "Abuja";
+const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
-	document.getElementById("lastModified").textContent =
-		"Last modification: " + document.lastModified;
+// Fetch Weather Data
+fetch(weatherUrl)
+	.then((response) => response.json())
+	.then((data) => {
+		const currentWeather = data.list[0];
+		const temp = Math.round(currentWeather.main.temp);
+		const weatherDescription = currentWeather.weather
+			.map((w) => capitalizeWords(w.description))
+			.join(", ");
 
-	var hamburger = document.getElementById("hamburger");
-	var navMenu = document.getElementById("nav-menu");
+		// Update weather info
+		document.querySelector(".weather-info").innerHTML = `
+      <p>City: ${city}</p>
+      <p>Temperature: ${temp}&deg;C</p>
+      <p>Description: ${weatherDescription}</p>
+    `;
 
-	hamburger.addEventListener("click", function () {
-		navMenu.classList.toggle("show");
-		if (hamburger.textContent === "✕") {
-			hamburger.textContent = "☰";
-		} else {
-			hamburger.textContent = "✕";
+		// Update weather icon
+		document.getElementById(
+			"weather-icon"
+		).src = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}@2x.png`;
+
+		// 3-day forecast
+		const forecastContainer = document.querySelector(".forecast-container");
+		for (let i = 1; i <= 3; i++) {
+			const forecast = data.list[i * 8];
+			forecastContainer.innerHTML += `
+        <div class="forecast">
+          <div class="day">${new Date(forecast.dt_txt).toLocaleDateString(
+						"en-US",
+						{ weekday: "long" }
+					)}</div>
+          <div class="temperature">${Math.round(forecast.main.temp)}&deg;C</div>
+        </div>
+      `;
 		}
-	});
+	})
+	.catch((error) => console.error("Error fetching weather data:", error));
 
-	// Get member container and view buttons
-	var membersContainer = document.getElementById("members-container");
-	var gridViewIcon = document.querySelector(
-		".toggle-buttons .icon:nth-child(1)"
-	);
-	var listViewIcon = document.querySelector(
-		".toggle-buttons .icon:nth-child(2)"
-	);
+// Function to capitalize each word
+function capitalizeWords(str) {
+	return str.replace(/\b\w/g, (char) => char.toUpperCase());
+}
 
-	// Fetch member data and display it
-	fetch("data/members.json")
-		.then(function (response) {
-			return response.json();
-		})
-		.then(function (members) {
-			displayMembers(members, "grid");
-		})
-		.catch(function (error) {
-			console.log("Error fetching member data: ", error);
+// Fetch member data and display spotlight members
+fetch("data/members.json")
+	.then((response) => response.json())
+	.then((members) => {
+		const goldSilverMembers = members.filter(
+			(member) => member.membership === 2 || member.membership === 3
+		);
+		const spotlightMembers = getRandomMembers(goldSilverMembers, 3); // Display 2 or 3 members
+
+		const spotlightContainer = document.getElementById("featured-members");
+		spotlightMembers.forEach((member) => {
+			spotlightContainer.innerHTML += `
+        <div class="card spotlight-card">
+          <img src="${member.image}" alt="${member.name}" class="member-logo">
+          <div class="card-content">
+            <h3>${member.name}</h3>
+            <p>${member.description}</p>
+            <p>Phone: ${member.phone}</p>
+            <p>Address: ${member.address}</p>
+            <a href="${member.website}" target="_blank">Visit Website</a>
+            <p>Membership Level: ${
+							member.membership === 2 ? "Silver" : "Gold"
+						}</p>
+          </div>
+        </div>
+      `;
 		});
+	})
+	.catch((error) => console.error("Error fetching member data:", error));
 
-	// Handle grid view button click
-	gridViewIcon.addEventListener("click", function () {
-		updateView("grid");
-	});
-
-	// Handle list view button click
-	listViewIcon.addEventListener("click", function () {
-		updateView("list");
-	});
-
-	// Function to update the view type
-	function updateView(viewType) {
-		fetch("data/members.json")
-			.then(function (response) {
-				return response.json();
-			})
-			.then(function (members) {
-				displayMembers(members, viewType);
-			})
-			.catch(function (error) {
-				console.log("Error fetching member data: ", error);
-			});
-	}
-
-	// Function to display members on the page
-	function displayMembers(members, viewType) {
-		membersContainer.innerHTML = "";
-		membersContainer.className =
-			viewType === "grid" ? "grid-view" : "list-view";
-
-		members.forEach(function (member) {
-			var memberCard = document.createElement("div");
-			memberCard.className = "member-card";
-			memberCard.innerHTML =
-				"<img src=" +
-				member.image +
-				" alt='" +
-				member.name +
-				"'>" +
-				"<h3>" +
-				member.name +
-				"</h3>" +
-				"<p>Address: " +
-				"<span>" +
-				member.address +
-				"</span>" +
-				"</p>" +
-				"<p>Phone: " +
-				"<span>" +
-				member.phone +
-				"</span>" +
-				"</p>" +
-				"<p>Website: <a href='" +
-				member.website +
-				"'>" +
-				member.website +
-				"</a></p>";
-
-			membersContainer.appendChild(memberCard);
-		});
-	}
-});
+function getRandomMembers(members, count) {
+	const shuffled = members.sort(() => 0.5 - Math.random());
+	return shuffled.slice(0, count);
+}

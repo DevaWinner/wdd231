@@ -116,6 +116,7 @@ main {
 
 /* Footer Styles */
 footer {
+  margin-top: 30px;
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 	text-align: center;
