@@ -1,13 +1,3 @@
-main {
-	padding: 3rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-main section {
-}
 
 .footer-content {
 	margin-top: 20px;
@@ -21,17 +11,6 @@ main section {
 .social-media img {
 	height: 24px;
 	width: 24px;
-}
-
-.hero div {
-	width: 100%;
-	height: 60vh;
-}
-
-.hero div img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
 }
 
 /* Member Directory Section */
