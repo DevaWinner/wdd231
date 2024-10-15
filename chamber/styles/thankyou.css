@@ -1,0 +1,33 @@
+.container {
+	padding: 2rem 1rem;
+	text-align: center;
+}
+
+#thankYouHeader {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.container p {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
+.user-info-table {
+	width: 100%;
+	margin: 0 auto 2em auto;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+.user-info-table th,
+.user-info-table td {
+	padding: 0.75em;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+.user-info-table th {
+	background-color: #f9f9f9;
+	font-weight: bold;
+}
