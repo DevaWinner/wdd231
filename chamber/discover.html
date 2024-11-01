@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Home Page of Abuja Chamber of Commerce">
+		<meta name="author" content="Aniekan Winner Anietie" />
+		<title>Discover - Abuja Chamber of Commerce</title>
+		<link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+		<meta property="og:title" content="Abuja Chamber of Commerce Directory" />
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://devawinner.github.io/wdd231/chamber/images/chamber-logo.svg"/>
+		<meta property="og:url" content="https://devawinner.github.io/wdd231/chamber/index.html">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Dongle&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=contrast,grid_view,view_list"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+		<link rel="stylesheet" href="./styles/base.css" />
+		<link rel="stylesheet" href="./styles/home.css" />
+		<script src="scripts/general.js" defer></script>
+		<script src="scripts/discover.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-container">
+				<img src="./images/chamber-logo.svg" alt="Abuja Chamber of Commerce Logo" class="logo" width="150" height="70"/>
+			</div>
+			<nav>
+				<span class="material-symbols-outlined contrast-icon small">
+					contrast
+				</span>
+				<button id="hamburger">&#9776;</button>
+				<ul id="nav-menu">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="directory.html">Directory</a></li>
+					<li><a href="join.html">Join</a></li>
+					<li><a href="discover.html" class="active">Discover</a></li>
+				</ul>
+				<span class="material-symbols-outlined contrast-icon large">
+					contrast
+				</span>
+			</nav>
+		</header>
+		<main>
+			<section class="discover">
+				<aside class="sidebar">
+					<div id="visit-message"></div>
+					<div class="sidebar-content">
+						<div class="sidebar-card">
+							<h2>Demographics</h2>
+							<p>Abuja, the capital city of Nigeria, has a diverse population exceeding 3 million people, known for its rich cultural heritage and rapid growth.</p>
+						</div>
+						<div class="sidebar-card">
+							<h2>Upcoming Events</h2>
+							<ul>
+								<li>International Trade Fair - November 15</li>
+								<li>Business Networking Meetup - December 2</li>
+								<li>Annual Economic Summit - January 20</li>
+								<li>Abuja Cultural Festival - February 10</li>
+							</ul>
+						</div>
+						<div class="sidebar-card">
+							<h2>Attractions</h2>
+							<p>Explore landmarks like Zuma Rock, Millennium Park, and the National Mosque, showcasing Abuja's beauty and architectural prowess.</p>
+						</div>
+						<div class="sidebar-card">
+							<h2>Business Calendar</h2>
+							<!-- Embed a real calendar -->
+							<iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=Africa%2FLagos" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+						</div>
+					</div>
+				</aside>
+				<section class="main-content">
+					<h1>Local Photos of Interest</h1>
+					<div class="photo-gallery">
+						<figure>
+							<img src="./images/church.jpg" alt="Description 1" loading="lazy">
+							<figcaption>National Church</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/commerce.jpg" alt="Description 2" loading="lazy">
+							<figcaption>Ministry of Commerce</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/federal.jpg" alt="Description 3" loading="lazy">
+							<figcaption>federal Secretariat</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/gate.jpg" alt="Description 4" loading="lazy">
+							<figcaption>Abuja City Gate</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/land.jpg" alt="Description 5" loading="lazy">
+							<figcaption>Abuja Landmark</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/millenium.jpg" alt="Description 6" loading="lazy">
+							<figcaption>Millenium Park</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/mosque.jpg" alt="Aerial view of Abuja cityscape" loading="lazy">
+							<figcaption>National Mosque</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/nysc.jpg" alt="Zuma Rock in Abuja" loading="lazy">
+							<figcaption>NYSC Camp</figcaption>
+						</figure>
+						<figure>
+							<img src="./images/mosque.jpg" alt="National Mosque at night" loading="lazy">
+							<figcaption>National Mosque</figcaption>
+						</figure>
+						
+					</div>
+				</section>
+			</section>
+		</main>
+		<footer>
+			<address>
+				Abuja Chamber of Commerce<br />
+					123 Main Street, Abuja, Nigeria<br />
+					info@abujachamber.com <br />
+					Phone: +234 123 456 789
+			</address>
+			<div class="social-media">
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/fb.svg" alt="Facebook" />
+				</a>
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/linkedin.svg" alt="Twitter" />
+				</a>
+				<a href="#" target="_blank">
+					<img class="social-icon" src="./images/twitter.svg" alt="LinkedIn" />
+				</a>
+			</div>
+			<div>
+				<p>WDD231 Class Project</p>
+				<p>Aniekan Winner Anietie</p>
+				<p>&copy; <span id="year"></span> Abuja Chamber of Commerce</p>
+				<p>Last modified: <span id="lastModified"></span></p>
+			</div>
+		</footer>
+	</body>
+</html>
