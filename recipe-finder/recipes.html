@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recipes - Recipe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Find and explore delicious recipes from around the world with Recipe Finder.">
+  <meta name="keywords" content="recipes, cooking, recipe finder, food, culinary">
+  <meta name="author" content="Aniekan Winner Anietie">
+  <link rel="canonical" href="https://devawinner.github.io/recipe-finder/recipes.html">
+  
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="Recipes - Recipe Finder">
+  <meta property="og:description" content="Find and explore delicious recipes from around the world with Recipe Finder.">
+  <meta property="og:image" content="images/recipe-finder.png">
+  <meta property="og:url" content="https://devawinner.github.io/recipe-finder/recipes.html">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">Recipe Finder</a>
+        <input type="checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="icon-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html" class="active">Recipes</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="recipes">
+      <div class="container">
+        <h1>Recipes</h1>
+        <div class="search-container">
+          <input type="text" id="search-input" placeholder="Search for recipes...">
+          <button id="search-button">Search</button>
+        </div>
+        <div class="recipe-grid" id="recipe-grid">
+          <!-- Recipes will be loaded here dynamically -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Recipe Finder</p>
+      <a href="attributions.html">Attributions</a>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="scripts/main.js" type="module"></script>
+</body>
+</html>
